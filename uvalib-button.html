@@ -1,0 +1,57 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-button/paper-button.html">
+
+<!--
+`uvalib-button`
+Standard button used for content
+
+@demo demo/index.html
+-->
+
+<dom-module id="uvalib-button">
+  <template>
+    <style is="custom-style">
+      a {
+        text-decoration: none;
+      }
+      paper-button {
+        background-color: var(--uvalib-button-bg-color,--color-primary-orange);
+        color: var(--uvalib-button-color,--color-white);
+        font-family: var(--uvalib-button-font,--font-primary);
+        font-weight: var(--font-weight-book,normal);
+      }
+    </style>
+    <template is="dom-if" if="{{href}}">
+      <a href="{{href}}" tabindex="-1">
+        <paper-button>
+          <content></content>
+        </paper-button>
+      </a>
+    </template>
+    <template is="dom-if" if="{{!href}}">
+      <paper-button>
+        <content></content>
+      </paper-button>
+    </template>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'uvalib-button',
+
+      properties: {
+        /**
+         * A URL that the button links to.
+         *
+         * @type {String}
+         */
+        href: {
+          type: String,
+          value: ""
+        }
+      }
+
+    });
+  </script>
+</dom-module>
