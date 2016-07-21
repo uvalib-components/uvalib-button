@@ -11,9 +11,14 @@ Standard button used for content
 <dom-module id="uvalib-button">
   <template>
     <style is="custom-style">
+      :host {
+        display: block;
+      }
+
       a {
         text-decoration: none;
       }
+      
       paper-button {
         background-color: var(--uvalib-button-bg-color,--color-primary-orange);
         color: var(--uvalib-button-color,--color-white);
@@ -40,6 +45,10 @@ Standard button used for content
     Polymer({
 
       is: 'uvalib-button',
+
+      hostAttributes: {
+        tabindex: 0
+      }
 
       properties: {
         /**
