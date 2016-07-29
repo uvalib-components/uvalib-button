@@ -5,6 +5,17 @@
 `uvalib-button`
 Standard button used for content
 
+### Styling
+
+The following custom properties are available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--uvalib-button-bkgrd-color` | Background color of button | `Based on uvalib-theme --color-primary-orange`
+`--uvalib-button-text-color` | Color of button text | `Based on uvalib-theme --color-white`
+`--uvalib-button-font-family` | Font family of button text | `Based on uvalib-theme --font-primary`
+`--uvalib-button-font-weight` | Font weight of button text | `Based on uvalib-theme --font-weight-book`
+
 @demo demo/index.html
 -->
 
@@ -15,17 +26,18 @@ Standard button used for content
         display: block;
       }
 
+      paper-button {
+        background-color: var(--uvalib-button-bkgrd-color,--color-primary-orange);
+        color: var(--uvalib-button-text-color,--color-white);
+        font-family: var(--uvalib-button-font-family,--font-primary);
+        font-weight: var(--uvalib-button-font-weight,--font-weight-book);
+      }
+
       a {
         text-decoration: none;
       }
-
-      paper-button {
-        background-color: var(--uvalib-button-bg-color,--color-primary-orange);
-        color: var(--uvalib-button-color,--color-white);
-        font-family: var(--uvalib-button-font,--font-primary);
-        font-weight: var(--font-weight-book,normal);
-      }
     </style>
+
     <template is="dom-if" if="{{href}}">
       <a href="{{href}}" tabindex="-1">
         <paper-button>
