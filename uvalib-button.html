@@ -56,11 +56,9 @@ Custom property | Description | Default
     Polymer({
 
       is: 'uvalib-button',
-
       hostAttributes: {
-        tabindex: 0
+        tabindex: -1
       },
-
       properties: {
         /**
          * A URL that the button links to.
@@ -72,7 +70,6 @@ Custom property | Description | Default
           value: ""
         }
       }
-
     });
   </script>
 </dom-module>
