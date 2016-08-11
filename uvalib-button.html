@@ -23,12 +23,17 @@ Custom property | Description | Default
   <template>
     <style is="custom-style">
       :host {
-        display: block;
+        display: inline;
+        color: var(--color-white);
+      }
+
+      a {
+        color: currentColor;
       }
 
       paper-button {
         background-color: var(--uvalib-button-bkgrd-color,--color-primary-orange);
-        color: var(--uvalib-button-text-color,--color-white);
+        color: var(--uvalib-button-text-color,currentColor);
         font-family: var(--uvalib-button-font-family,--font-primary);
         font-weight: var(--uvalib-button-font-weight,--font-weight-book);
       }

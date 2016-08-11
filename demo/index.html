@@ -22,11 +22,20 @@
       <h3>Basic uvalib-button Demo</h3>
       <demo-snippet>
         <template>
+          <style is="custom-style">
+            .custom {
+              color: red;
+              --uvalib-button-bkgrd-color: blue;
+            }
+          </style>
           <p>
             <uvalib-button href="https://www.library.virginia.edu">UVA Library Homepage</uvalib-button>
           </p>
           <p>
             <uvalib-button>Button Without Link</uvalib-button>
+          </p>
+          <p>
+            <uvalib-button class="custom">Custom</uvalib-button>
           </p>
         </template>
       </demo-snippet>
