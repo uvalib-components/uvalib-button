@@ -22,23 +22,36 @@
       <h3>Basic uvalib-button Demo</h3>
       <demo-snippet>
         <template>
-          <style is="custom-style">
-            .custom {
-              color: red;
-              --uvalib-button-bkgrd-color: blue;
-            }
-          </style>
-          <p>
-            <uvalib-button href="https://www.library.virginia.edu">UVA Library Homepage</uvalib-button>
-          </p>
-          <p>
-            <uvalib-button>Button Without Link</uvalib-button>
-          </p>
-          <p>
-            <uvalib-button class="custom">Custom</uvalib-button>
-          </p>
+          <uvalib-button>simple</uvalib-button>
+          <uvalib-button raised>raised</uvalib-button>
+          <uvalib-button toggles raised>toggles</uvalib-button>
+          <uvalib-button disabled>disabled</uvalib-button>
         </template>
       </demo-snippet>
+
+      <h3>uvalib-button with icon Demo</h3>
+      <demo-snippet>
+        <template>
+          <uvalib-button icon="bars"></uvalib-button>
+          <uvalib-button icon="search" raised>with text</uvalib-button>
+          <uvalib-button icon="user">another</uvalib-button>
+        </template>
+      </demo-snippet>
+
+      <h3>uvalib-button with link Demo</h3>
+      <demo-snippet>
+        <style is="custom-style">
+          .custom {
+            color: var(--color-primary-orange);
+          }
+        </style>
+        <template>
+          <uvalib-button href="https://www.library.virginia.edu">UVA Library Homepage</uvalib-button>
+          <uvalib-button href="https://www.library.virginia.edu" class="custom" icon="search">Custom</uvalib-button>
+          <uvalib-button href="https://www.library.virginia.edu" class="custom" icon="comments"></uvalib-button>
+        </template>
+      </demo-snippet>
+
     </div>
 
   </body>
