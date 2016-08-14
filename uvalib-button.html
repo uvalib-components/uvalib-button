@@ -53,21 +53,29 @@ Custom property | Description | Default
       <template is="dom-if" if="{{href}}">
         <a href="{{href}}" tabindex="-1">
           <paper-button raised$="{{raised}}" toggles$="{{toggles}}" disabled$="{{disabled}}">
-            <template is="dom-if" if="{{icon}}">
+            <template is="dom-if" if="{{_icon_forward(icon,reverse)}}">
               <link rel="import" href="../iron-icon/iron-icon.html">
               <iron-icon icon$="{{icon}}"></iron-icon>
             </template>
             <content></content>
+            <template is="dom-if" if="{{_icon_reverse(icon,reverse)}}">
+              <link rel="import" href="../iron-icon/iron-icon.html">
+              <iron-icon icon$="{{icon}}"></iron-icon>
+            </template>
           </paper-button>
         </a>
       </template>
       <template is="dom-if" if="{{!href}}">
         <paper-button raised$="{{raised}}" toggles$="{{toggles}}" disabled$="{{disabled}}">
-          <template is="dom-if" if="{{icon}}">
+          <template is="dom-if" if="{{_iconForward(icon,reverse)}}">
             <link rel="import" href="../iron-icon/iron-icon.html">
             <iron-icon icon$="{{icon}}"></iron-icon>
           </template>
           <content></content>
+          <template is="dom-if" if="{{_iconReverse(icon,reverse)}}">
+            <link rel="import" href="../iron-icon/iron-icon.html">
+            <iron-icon icon$="{{icon}}"></iron-icon>
+          </template>
         </paper-button>
       </template>
     </template>
@@ -116,6 +124,10 @@ Custom property | Description | Default
           type: Boolean,
           value: false
         },
+        reverse: {
+          type: Boolean,
+          value: false
+        },
         icon: String,
         _childCount: Number
       },
@@ -131,6 +143,12 @@ Custom property | Description | Default
       },
       _isLoneIcon: function(){
         return !this._hasContent() && this._hasIcon();
+      },
+      _iconForward: function(){
+        return this.icon && !this.reverse;
+      },
+      _iconReverse: function(){
+        return this.icon && this.reverse;
       }
     });
   </script>
