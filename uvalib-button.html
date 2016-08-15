@@ -45,6 +45,12 @@ Custom property | Description | Default
       a {
         text-decoration: none;
       }
+      iron-icon[left] {
+        padding-right: 5px;
+      }
+      iron-icon[right] {
+        padding-left: 5px;
+      }
     </style>
 
     <!-- if content node exists then we use a paper-button -->
@@ -55,12 +61,12 @@ Custom property | Description | Default
           <paper-button raised$="{{raised}}" toggles$="{{toggles}}" disabled$="{{disabled}}">
             <template is="dom-if" if="{{_icon_forward(icon,reverse)}}">
               <link rel="import" href="../iron-icon/iron-icon.html">
-              <iron-icon icon$="{{icon}}"></iron-icon>
+              <iron-icon icon$="{{icon}}" left></iron-icon>
             </template>
             <content></content>
             <template is="dom-if" if="{{_icon_reverse(icon,reverse)}}">
               <link rel="import" href="../iron-icon/iron-icon.html">
-              <iron-icon icon$="{{icon}}"></iron-icon>
+              <iron-icon icon$="{{icon}}" right></iron-icon>
             </template>
           </paper-button>
         </a>
@@ -69,12 +75,12 @@ Custom property | Description | Default
         <paper-button raised$="{{raised}}" toggles$="{{toggles}}" disabled$="{{disabled}}">
           <template is="dom-if" if="{{_iconForward(icon,reverse)}}">
             <link rel="import" href="../iron-icon/iron-icon.html">
-            <iron-icon icon$="{{icon}}"></iron-icon>
+            <iron-icon icon$="{{icon}}" left></iron-icon>
           </template>
           <content></content>
           <template is="dom-if" if="{{_iconReverse(icon,reverse)}}">
             <link rel="import" href="../iron-icon/iron-icon.html">
-            <iron-icon icon$="{{icon}}"></iron-icon>
+            <iron-icon icon$="{{icon}}" right></iron-icon>
           </template>
         </paper-button>
       </template>
