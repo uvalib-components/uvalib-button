@@ -41,15 +41,37 @@
 
       <h3>uvalib-button with link Demo</h3>
       <demo-snippet>
-        <style is="custom-style">
-          .custom {
-            color: var(--color-primary-orange);
-          }
-        </style>
         <template>
+          <style is="custom-style">
+            .custom {
+              color: var(--color-primary-orange);
+            }
+          </style>
           <uvalib-button href="https://www.library.virginia.edu">UVA Library Homepage</uvalib-button>
           <uvalib-button href="https://www.library.virginia.edu" class="custom" icon="search">Custom</uvalib-button>
           <uvalib-button href="https://www.library.virginia.edu" class="custom" icon="comments"></uvalib-button>
+        </template>
+      </demo-snippet>
+
+      <h3>Custom uvalib-button with icon Demo</h3>
+      <demo-snippet>
+        <template>
+          <style is="custom-style">
+            .small {
+              font-size: 10px;
+              --uvalib-button-icon-width: 10px;
+              --uvalib-button-icon-height: 10px;
+            }
+            .large {
+              font-size: 30px;
+              --uvalib-button-icon-width: 30px;
+              --uvalib-button-icon-height: 30px;
+            }
+          </style>
+          <uvalib-button icon="bars" class="small">Small</uvalib-button><br />
+          <uvalib-button icon="search" raised style="color: blue; height: 33px;">Blue</uvalib-button><br />
+          <uvalib-button icon="user" class="large">Large</uvalib-button><br />
+          <uvalib-button icon="comments" reverse>reverse</uvalib-button><br />
         </template>
       </demo-snippet>
 
