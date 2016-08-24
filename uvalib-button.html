@@ -1,5 +1,9 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../uvalib-theme/uvalib-icons.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../uvalib-theme/uvalib-theme.html">
 
 <!--
 `uvalib-button`
@@ -21,7 +25,7 @@ Custom property | Description | Default
 
 <dom-module id="uvalib-button">
   <template>
-    <style is="custom-style">
+    <style is="custom-style" include="uvalib-theme">
       :host {
         display: inline;
         color: var(--color-text-gray);
@@ -60,17 +64,14 @@ Custom property | Description | Default
 
     <!-- if content node exists then we use a paper-button -->
     <template is="dom-if" if="{{_hasContent(_childText)}}">
-      <link rel="import" href="../paper-button/paper-button.html">
       <template is="dom-if" if="{{href}}">
         <a href="{{href}}" tabindex="-1">
           <paper-button raised$="{{raised}}" toggles$="{{toggles}}" disabled$="{{disabled}}">
             <template is="dom-if" if="{{_iconForward(icon,reverse)}}">
-              <link rel="import" href="../iron-icon/iron-icon.html">
               <iron-icon icon$="{{icon}}" left></iron-icon>
             </template>
             <content></content>
             <template is="dom-if" if="{{_iconReverse(icon,reverse)}}">
-              <link rel="import" href="../iron-icon/iron-icon.html">
               <iron-icon icon$="{{icon}}" right></iron-icon>
             </template>
           </paper-button>
@@ -79,12 +80,10 @@ Custom property | Description | Default
       <template is="dom-if" if="{{!href}}">
         <paper-button raised$="{{raised}}" toggles$="{{toggles}}" disabled$="{{disabled}}">
           <template is="dom-if" if="{{_iconForward(icon,reverse)}}">
-            <link rel="import" href="../iron-icon/iron-icon.html">
             <iron-icon icon$="{{icon}}" left></iron-icon>
           </template>
           <content></content>
           <template is="dom-if" if="{{_iconReverse(icon,reverse)}}">
-            <link rel="import" href="../iron-icon/iron-icon.html">
             <iron-icon icon$="{{icon}}" right></iron-icon>
           </template>
         </paper-button>
@@ -93,7 +92,6 @@ Custom property | Description | Default
 
     <!-- if there is no content node and there is an icon attribute then we use a paper-icon-button -->
     <template is="dom-if" if="{{_isLoneIcon(_childText)}}">
-      <link rel="import" href="../paper-icon-button/paper-icon-button.html">
       <template is="dom-if" if="{{href}}">
         <a href="{{href}}" tabindex="-1">
           <paper-icon-button icon$="{{icon}}" toggles$="{{toggles}}" disabled$="{{disabled}}"></paper-button>
