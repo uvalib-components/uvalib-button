@@ -3,9 +3,10 @@
   "description": "Standard button used for content",
   "main": "uvalib-button.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0",
+    "polymer": "polymer/polymer#^1.6.1",
     "iron-icon": "PolymerElements/iron-icon#^1.0.10",
-    "paper-icon-button": "PolymerElements/paper-icon-button#^1.1.2"
+    "paper-icon-button": "PolymerElements/paper-icon-button#^1.1.2",
+    "uvalib-theme": "uvalib-components/uvalib-theme"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
@@ -13,5 +14,8 @@
     "uvalib-theme": "uvalib-components/uvalib-theme#master",
     "web-component-tester": "^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "resolutions": {
+    "uvalib-theme": "master"
   }
 }
