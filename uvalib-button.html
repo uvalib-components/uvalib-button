@@ -29,6 +29,14 @@ Custom property | Description | Default
       :host {
         display: inline;
         color: var(--color-text-gray);
+        --paper-button-raised-keyboard-focus: {
+          font-weight: normal;
+          outline: cyan solid 3px;
+        }
+        --paper-button-flat-keyboard-focus: {
+          font-weight: normal;
+          outline: cyan solid 3px;
+        }
       }
 
       a {
@@ -47,9 +55,14 @@ Custom property | Description | Default
         color: var(--uvalib-button-text-color, currentColor);
       }
 
+      paper-icon-button:focus {
+        outline: cyan solid 3px;
+      }
+      
       a {
         text-decoration: none;
       }
+
       iron-icon {
         --iron-icon-width: var(--uvalib-button-icon-width);
         --iron-icon-height: var(--uvalib-button-icon-height);
