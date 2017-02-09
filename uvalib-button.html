@@ -15,6 +15,7 @@ The following custom properties are available for styling:
 
 Custom property | Description | Default
 ----------------|-------------|----------
+`--uvalib-button` | Mixin applied to the button | `{}`
 `--uvalib-button-bkgrd-color` | Background color of button | `Based on uvalib-theme --color-primary-orange`
 `--uvalib-button-text-color` | Color of button text | `Based on uvalib-theme --color-white`
 `--uvalib-button-text-transform` | Text Transform of button text | `defaults to uppercase`
@@ -51,6 +52,7 @@ Custom property | Description | Default
         color: var(--uvalib-button-text-color, currentColor);
         font-family: var(--uvalib-button-font-family, --font-primary);
         font-weight: var(--uvalib-button-font-weight, --font-weight-book);
+        @apply(--uvalib-button);
       }
 
       paper-icon-button {
