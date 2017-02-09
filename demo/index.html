@@ -34,7 +34,12 @@
       <h3>Basic uvalib-button Demo</h3>
       <demo-snippet>
         <template>
-          <uvalib-button>simple</uvalib-button>
+          <style is="custom-style">
+            .simple {
+              --uvalib-button-text-transform: none;
+            }
+          </style>
+          <uvalib-button class="simple">simple</uvalib-button>
           <uvalib-button raised>raised</uvalib-button>
           <uvalib-button toggles raised>toggles</uvalib-button>
           <uvalib-button disabled>disabled</uvalib-button>

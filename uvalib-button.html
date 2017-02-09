@@ -17,6 +17,7 @@ Custom property | Description | Default
 ----------------|-------------|----------
 `--uvalib-button-bkgrd-color` | Background color of button | `Based on uvalib-theme --color-primary-orange`
 `--uvalib-button-text-color` | Color of button text | `Based on uvalib-theme --color-white`
+`--uvalib-button-text-transform` | Text Transform of button text | `defaults to uppercase`
 `--uvalib-button-font-family` | Font family of button text | `Based on uvalib-theme --font-primary`
 `--uvalib-button-font-weight` | Font weight of button text | `Based on uvalib-theme --font-weight-book`
 
@@ -44,6 +45,7 @@ Custom property | Description | Default
       }
 
       paper-button {
+        text-transform: var(--uvalib-button-text-transform, uppercase);
         height: inherit;
         background-color: var(--uvalib-button-bkgrd-color, transparent);
         color: var(--uvalib-button-text-color, currentColor);
