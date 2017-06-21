@@ -82,42 +82,42 @@ Custom property | Description | Default
     </style>
 
     <!-- if content node exists then we use a paper-button -->
-    <template is="dom-if" if="{{_hasContent(_childText)}}">
-      <template is="dom-if" if="{{href}}">
-        <a href="{{href}}" tabindex="-1">
-          <paper-button raised$="{{raised}}" toggles$="{{toggles}}" disabled$="{{disabled}}">
-            <template is="dom-if" if="{{_iconForward(icon,reverse)}}">
-              <iron-icon icon$="{{icon}}" left></iron-icon>
+    <template is="dom-if" if="[[_hasContent(_childText)]]" restamp>
+      <template is="dom-if" if="[[href]]" restamp>
+        <a href="[[href]]" tabindex="-1">
+          <paper-button raised$="[[raised]]" toggles$="[[toggles]]" disabled$="[[disabled]]">
+            <template is="dom-if" if="[[_iconForward(icon,reverse)]]" restamp>
+              <iron-icon icon$="[[icon]]" left></iron-icon>
             </template>
             <content></content>
-            <template is="dom-if" if="{{_iconReverse(icon,reverse)}}">
-              <iron-icon icon$="{{icon}}" right></iron-icon>
+            <template is="dom-if" if="[[_iconReverse(icon,reverse)]]" restamp>
+              <iron-icon icon$="[[icon]]" right></iron-icon>
             </template>
           </paper-button>
         </a>
       </template>
-      <template is="dom-if" if="{{!href}}">
-        <paper-button raised$="{{raised}}" toggles$="{{toggles}}" disabled$="{{disabled}}">
-          <template is="dom-if" if="{{_iconForward(icon,reverse)}}">
-            <iron-icon icon$="{{icon}}" left></iron-icon>
+      <template is="dom-if" if="[[!href]]" restamp>
+        <paper-button raised$="[[raised]]" toggles$="[[toggles]]" disabled$="[[disabled]]">
+          <template is="dom-if" if="[[_iconForward(icon,reverse)]]" restamp>
+            <iron-icon icon$="[[icon]]" left></iron-icon>
           </template>
           <content></content>
-          <template is="dom-if" if="{{_iconReverse(icon,reverse)}}">
-            <iron-icon icon$="{{icon}}" right></iron-icon>
+          <template is="dom-if" if="[[_iconReverse(icon,reverse)]]" restamp>
+            <iron-icon icon$="[[icon]]" right></iron-icon>
           </template>
         </paper-button>
       </template>
     </template>
 
     <!-- if there is no content node and there is an icon attribute then we use a paper-icon-button -->
-    <template is="dom-if" if="{{_isLoneIcon(_childText)}}">
-      <template is="dom-if" if="{{href}}">
-        <a href="{{href}}" tabindex="-1">
-          <paper-icon-button icon$="{{icon}}" toggles$="{{toggles}}" disabled$="{{disabled}}"></paper-button>
+    <template is="dom-if" if="[[_isLoneIcon(icon,_childText)]]" restamp>
+      <template is="dom-if" if="[[href]]" restamp>
+        <a href="[[href]]" tabindex="-1">
+          <paper-icon-button icon$="[[icon]]" toggles$="[[toggles]]" disabled$="[[disabled]]"></paper-button>
         </a>
       </template>
-      <template is="dom-if" if="{{!href}}">
-        <paper-icon-button icon$="{{icon}}" toggles$="{{toggles}}" disabled$="{{disabled}}"></paper-button>
+      <template is="dom-if" if="[[!href]]" restamp>
+        <paper-icon-button icon$="[[icon]]" toggles$="[[toggles]]" disabled$="[[disabled]]"></paper-button>
       </template>
     </template>
 
@@ -173,10 +173,10 @@ Custom property | Description | Default
         return !this._hasContent() && this._hasIcon();
       },
       _iconForward: function(){
-        return this.icon && !this.reverse;
+        return this._hasIcon() && !this.reverse;
       },
       _iconReverse: function(){
-        return this.icon && this.reverse;
+        return this._hasIcon() && this.reverse;
       }
     });
   </script>
