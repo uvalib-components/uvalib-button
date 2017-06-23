@@ -25,8 +25,10 @@
     <link rel="import" href="../../uvalib-theme/uvalib-theme.html">
     <link rel="import" href="../uvalib-button.html">
 
-    <style is="custom-style" include="demo-pages-shared-styles">
-    </style>
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
   </head>
   <body>
 
@@ -34,21 +36,23 @@
       <h3>Basic uvalib-button Demo</h3>
       <demo-snippet>
         <template>
-          <style is="custom-style">
-            .simple {
-              --uvalib-button: {
-                text-transform: none;
-                font-family: SofiaPro;
-                font-size: 14px;
-                font-weight: bold;
-                font-style: normal;
-                font-stretch: normal;
-                line-height: 1.14;
-                letter-spacing: 10px;
-                color: #fd7d1c;
-              };
-            }
-          </style>
+          <custom-style>
+            <style is="custom-style">
+              .simple {
+                --uvalib-button: {
+                  text-transform: none;
+                  font-family: SofiaPro;
+                  font-size: 14px;
+                  font-weight: bold;
+                  font-style: normal;
+                  font-stretch: normal;
+                  line-height: 1.14;
+                  letter-spacing: 10px;
+                  color: #fd7d1c;
+                };
+              }
+            </style>
+          </custom-style>
           <uvalib-button class="simple">simple</uvalib-button>
           <uvalib-button raised>raised</uvalib-button>
           <uvalib-button toggles raised>toggles</uvalib-button>
@@ -69,11 +73,13 @@
       <h3>uvalib-button with link Demo</h3>
       <demo-snippet>
         <template>
-          <style is="custom-style">
-            .custom {
-              color: var(--color-primary-orange);
-            }
-          </style>
+          <custom-style>
+            <style is="custom-style">
+              .custom {
+                color: var(--color-primary-orange);
+              }
+            </style>
+          </custom-style>
           <uvalib-button href="https://www.library.virginia.edu">UVA Library Homepage</uvalib-button>
           <uvalib-button href="https://www.library.virginia.edu" class="custom" icon="search">Custom</uvalib-button>
           <uvalib-button href="https://www.library.virginia.edu" class="custom" icon="comments"></uvalib-button>
@@ -83,18 +89,20 @@
       <h3>Custom uvalib-button with icon Demo</h3>
       <demo-snippet>
         <template>
-          <style is="custom-style">
-            .small {
-              font-size: 10px;
-              --uvalib-button-icon-width: 10px;
-              --uvalib-button-icon-height: 10px;
-            }
-            .large {
-              font-size: 30px;
-              --uvalib-button-icon-width: 30px;
-              --uvalib-button-icon-height: 30px;
-            }
-          </style>
+          <custom-style>
+            <style is="custom-style">
+              .small {
+                font-size: 10px;
+                --uvalib-button-icon-width: 10px;
+                --uvalib-button-icon-height: 10px;
+              }
+              .large {
+                font-size: 30px;
+                --uvalib-button-icon-width: 30px;
+                --uvalib-button-icon-height: 30px;
+              }
+            </style>
+          </custom-style>
           <uvalib-button icon="bars" class="small">Small</uvalib-button><br />
           <uvalib-button icon="search" raised style="color: blue; height: 33px;">Blue</uvalib-button><br />
           <uvalib-button icon="user" class="large">Large</uvalib-button><br />
