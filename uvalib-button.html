@@ -29,59 +29,57 @@ Custom property | Description | Default
 
 <dom-module id="uvalib-button">
   <template>
-    <custom-style>
-      <style is="custom-style" include="uvalib-theme">
-        :host {
-          display: inline;
-          color: var(--color-text-gray);
-          --paper-button-raised-keyboard-focus: {
-            font-weight: normal;
-            outline: var(--color-accessibility-outline) solid 3px;
-          }
-          --paper-button-flat-keyboard-focus: {
-            font-weight: normal;
-            outline: var(--color-accessibility-outline) solid 3px;
-          }
-        }
-
-        a {
-          color: currentColor;
-        }
-
-        paper-button {
-          text-transform: var(--uvalib-button-text-transform, uppercase);
-          height: inherit;
-          background-color: var(--uvalib-button-bkgrd-color, transparent);
-          color: var(--uvalib-button-text-color, currentColor);
-          font-family: var(--uvalib-button-font-family, var(--font-primary));
-          font-weight: var(--uvalib-button-font-weight, var(--font-weight-book));
-          @apply --uvalib-button;
-        }
-
-        paper-icon-button {
-          color: var(--uvalib-button-text-color, currentColor);
-        }
-
-        paper-icon-button:focus {
+    <style include="uvalib-theme">
+      :host {
+        display: inline;
+        color: var(--color-text-gray);
+        --paper-button-raised-keyboard-focus: {
+          font-weight: normal;
           outline: var(--color-accessibility-outline) solid 3px;
         }
+        --paper-button-flat-keyboard-focus: {
+          font-weight: normal;
+          outline: var(--color-accessibility-outline) solid 3px;
+        }
+      }
 
-        a {
-          text-decoration: none;
-        }
+      a {
+        color: currentColor;
+      }
 
-        iron-icon {
-          --iron-icon-width: var(--uvalib-button-icon-width);
-          --iron-icon-height: var(--uvalib-button-icon-height);
-        }
-        iron-icon[left] {
-          padding-right: 5px;
-        }
-        iron-icon[right] {
-          padding-left: 5px;
-        }
-      </style>
-    </custom-style>
+      paper-button {
+        text-transform: var(--uvalib-button-text-transform, uppercase);
+        height: inherit;
+        background-color: var(--uvalib-button-bkgrd-color, transparent);
+        color: var(--uvalib-button-text-color, currentColor);
+        font-family: var(--uvalib-button-font-family, var(--font-primary));
+        font-weight: var(--uvalib-button-font-weight, var(--font-weight-book));
+        @apply --uvalib-button;
+      }
+
+      paper-icon-button {
+        color: var(--uvalib-button-text-color, currentColor);
+      }
+
+      paper-icon-button:focus {
+        outline: var(--color-accessibility-outline) solid 3px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      iron-icon {
+        --iron-icon-width: var(--uvalib-button-icon-width);
+        --iron-icon-height: var(--uvalib-button-icon-height);
+      }
+      iron-icon[left] {
+        padding-right: 5px;
+      }
+      iron-icon[right] {
+        padding-left: 5px;
+      }
+    </style>
 
     <!-- if content node exists then we use a paper-button -->
     <dom-if>
