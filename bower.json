@@ -3,6 +3,6 @@
   "description": "Standard button used for content",
   "main": "uvalib-button.html",
   "dependencies": {
-    "uvalib-elements": "uvalib-components/uvalib-elements#2.0"
+    "uvalib-elements": "uvalib-components/uvalib-elements#master"
   }
 }
