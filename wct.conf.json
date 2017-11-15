@@ -181,7 +181,7 @@
       ]
     },
     "local": {
-      "browsers": ["chrome", "firefox", "safari"]
+      "browsers": ["chrome", "firefox"]
     }
   }
 }
