@@ -1,0 +1,24 @@
+{
+  "name": "uvalib-models",
+  "description": "Binds to the UVA Library APIs",
+  "main": "uvalib-models.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  },
+  "devDependencies": {
+    "uvalib-elements": "uvalib-components/uvalib-elements#master"
+  },
+  "resolutions": {
+    "lodash": "^4.17.4"
+  },
+  "homepage": "https://github.com/uvalib-components/uvalib-models",
+  "_release": "18e9e7113b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "18e9e7113b6bfd00bdf7089e63bde31bba18a964"
+  },
+  "_source": "https://github.com/uvalib-components/uvalib-models.git",
+  "_target": "master",
+  "_originalSource": "uvalib-components/uvalib-models"
+}

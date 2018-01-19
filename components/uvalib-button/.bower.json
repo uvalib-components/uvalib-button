@@ -1,0 +1,21 @@
+{
+  "name": "uvalib-button",
+  "description": "Standard button used for content",
+  "main": "uvalib-button.html",
+  "dependencies": {
+    "uvalib-elements": "uvalib-components/uvalib-elements#master"
+  },
+  "resolutions": {
+    "lodash": "^4.17.4"
+  },
+  "homepage": "https://github.com/uvalib-components/uvalib-button",
+  "_release": "cc5de182b6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "cc5de182b635a0cd3cac0907149071d4a245a32f"
+  },
+  "_source": "https://github.com/uvalib-components/uvalib-button.git",
+  "_target": "master",
+  "_originalSource": "uvalib-components/uvalib-button"
+}
