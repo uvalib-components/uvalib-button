@@ -7,36 +7,17 @@
       "path": "uvalib-button.html",
       "properties": [
         {
-          "name": "hostAttributes",
-          "type": "Object",
-          "description": "",
-          "privacy": "protected",
-          "sourceRange": {
-            "start": {
-              "line": 135,
-              "column": 6
-            },
-            "end": {
-              "line": 137,
-              "column": 7
-            }
-          },
-          "metadata": {
-            "polymer": {}
-          }
-        },
-        {
           "name": "href",
           "type": "string",
           "description": "A URL that the button links to.",
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 144,
+              "line": 141,
               "column": 8
             },
             "end": {
-              "line": 147,
+              "line": 144,
               "column": 9
             }
           },
@@ -52,11 +33,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 148,
+              "line": 145,
               "column": 8
             },
             "end": {
-              "line": 151,
+              "line": 148,
               "column": 9
             }
           },
@@ -72,11 +53,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 152,
+              "line": 149,
               "column": 8
             },
             "end": {
-              "line": 155,
+              "line": 152,
               "column": 9
             }
           },
@@ -92,11 +73,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 156,
+              "line": 153,
               "column": 8
             },
             "end": {
-              "line": 159,
+              "line": 156,
               "column": 9
             }
           },
@@ -112,11 +93,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 160,
+              "line": 157,
               "column": 8
             },
             "end": {
-              "line": 163,
+              "line": 160,
               "column": 9
             }
           },
@@ -132,11 +113,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 164,
+              "line": 161,
               "column": 8
             },
             "end": {
-              "line": 164,
+              "line": 161,
               "column": 20
             }
           },
@@ -151,11 +132,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 165,
+              "line": 162,
               "column": 8
             },
             "end": {
-              "line": 165,
+              "line": 162,
               "column": 27
             }
           },
@@ -167,6 +148,23 @@
       "methods": [
         {
           "name": "attached",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 165,
+              "column": 6
+            },
+            "end": {
+              "line": 167,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "params": []
+        },
+        {
+          "name": "_hasContent",
           "description": "",
           "privacy": "protected",
           "sourceRange": {
@@ -183,7 +181,7 @@
           "params": []
         },
         {
-          "name": "_hasContent",
+          "name": "_hasIcon",
           "description": "",
           "privacy": "protected",
           "sourceRange": {
@@ -200,7 +198,7 @@
           "params": []
         },
         {
-          "name": "_hasIcon",
+          "name": "_isLoneIcon",
           "description": "",
           "privacy": "protected",
           "sourceRange": {
@@ -217,7 +215,7 @@
           "params": []
         },
         {
-          "name": "_isLoneIcon",
+          "name": "_iconForward",
           "description": "",
           "privacy": "protected",
           "sourceRange": {
@@ -234,7 +232,7 @@
           "params": []
         },
         {
-          "name": "_iconForward",
+          "name": "_iconReverse",
           "description": "",
           "privacy": "protected",
           "sourceRange": {
@@ -244,23 +242,6 @@
             },
             "end": {
               "line": 182,
-              "column": 7
-            }
-          },
-          "metadata": {},
-          "params": []
-        },
-        {
-          "name": "_iconReverse",
-          "description": "",
-          "privacy": "protected",
-          "sourceRange": {
-            "start": {
-              "line": 183,
-              "column": 6
-            },
-            "end": {
-              "line": 185,
               "column": 7
             }
           },
@@ -282,7 +263,7 @@
           "column": 12
         },
         "end": {
-          "line": 186,
+          "line": 183,
           "column": 5
         }
       },
@@ -294,11 +275,11 @@
           "description": "A URL that the button links to.",
           "sourceRange": {
             "start": {
-              "line": 144,
+              "line": 141,
               "column": 8
             },
             "end": {
-              "line": 147,
+              "line": 144,
               "column": 9
             }
           },
@@ -310,11 +291,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 148,
+              "line": 145,
               "column": 8
             },
             "end": {
-              "line": 151,
+              "line": 148,
               "column": 9
             }
           },
@@ -326,11 +307,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 152,
+              "line": 149,
               "column": 8
             },
             "end": {
-              "line": 155,
+              "line": 152,
               "column": 9
             }
           },
@@ -342,11 +323,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 156,
+              "line": 153,
               "column": 8
             },
             "end": {
-              "line": 159,
+              "line": 156,
               "column": 9
             }
           },
@@ -358,11 +339,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 160,
+              "line": 157,
               "column": 8
             },
             "end": {
-              "line": 163,
+              "line": 160,
               "column": 9
             }
           },
@@ -374,11 +355,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 164,
+              "line": 161,
               "column": 8
             },
             "end": {
-              "line": 164,
+              "line": 161,
               "column": 20
             }
           },
